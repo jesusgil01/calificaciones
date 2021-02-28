@@ -19,17 +19,6 @@
         android:textSize="40sp"
         android:textStyle="bold"
         />
-    <EditText
-        android:id="@+id/barraBusqueda"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:hint="@string/barraBusqueda"
-        android:textStyle="italic"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/custom_input_rad"
-        android:layout_marginTop="25dp"
-        android:gravity="center"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,7 +56,7 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/fab_option1"
+            android:id="@+id/fab_agrega_alumno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/fab_margin"
@@ -79,8 +68,25 @@
             android:tint="@color/white"
             app:borderWidth="0dp"
             app:layout_constraintBottom_toTopOf="@+id/fab"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/fab"
             android:text="Agregar alumno"
+            android:visibility="invisible"/>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fab_agrega_calificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/orange"
+            android:clickable="true"
+            android:elevation="6dp"
+            android:focusable="true"
+            android:tint="@color/white"
+            app:borderWidth="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/fab_agrega_alumno"
+            app:layout_constraintEnd_toEndOf="@id/fab"
+            android:text="Agregar calificación"
             android:visibility="invisible"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

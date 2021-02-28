@@ -57,7 +57,8 @@
             android:layout_marginRight="28dp"
             android:hint="Ejem: 213203497"
             android:gravity="center"
-            android:textStyle="italic"/>
+            android:textStyle="italic"
+            android:inputType="number"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

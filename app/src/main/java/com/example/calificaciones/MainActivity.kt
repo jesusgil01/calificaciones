@@ -42,17 +42,18 @@ class MainActivity : AppCompatActivity() {
 
 
         val fab = findViewById<FloatingActionButton>(R.id.fab)
-        val fab_option = findViewById<ExtendedFloatingActionButton>(R.id.fab_option1)
+        val fab_agrega_alumno = findViewById<ExtendedFloatingActionButton>(R.id.fab_agrega_alumno)
 
         fab.setOnClickListener { view ->
             onAddButtonClicked()
         }
 
-        fab_option.setOnClickListener { view ->
+        fab_agrega_alumno.setOnClickListener { view ->
             nuevoAlumno(mAdapter)
         }
 
     }
+
 
     private fun nuevoAlumno(adapter: RecyclerViewAdapter) {
         val view = View.inflate(this, R.layout.agregar_alumno,null)
@@ -62,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         dialog.show()
         dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
         onAddButtonClicked()
-        view.findViewById<Button>(R.id.aa_aceptar).setOnClickListener { v: View ->
+        view.findViewById<Button>(R.id.aa_cancelar).setOnClickListener { v: View ->
             dialog.dismiss()
         }
         view.findViewById<Button>(R.id.aa_aceptar).setOnClickListener { v : View ->
@@ -85,32 +86,32 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setclickable(clicked: Boolean) {
-        val fab_option = findViewById<ExtendedFloatingActionButton>(R.id.fab_option1)
+        val fab_agrega_alumno = findViewById<ExtendedFloatingActionButton>(R.id.fab_agrega_alumno)
         if (!clicked){
-            fab_option.isClickable = true
+            fab_agrega_alumno.isClickable = true
         } else {
-            fab_option.isClickable = false
+            fab_agrega_alumno.isClickable = false
         }
 
     }
 
     private fun setVisibility(clicked: Boolean) {
-        val fab_option = findViewById<ExtendedFloatingActionButton>(R.id.fab_option1)
+        val fab_agrega_alumno = findViewById<ExtendedFloatingActionButton>(R.id.fab_agrega_alumno)
         if (!clicked){
-            fab_option.visibility = View.VISIBLE
+            fab_agrega_alumno.visibility = View.VISIBLE
         } else {
-           fab_option.visibility = View.INVISIBLE
+            fab_agrega_alumno.visibility = View.INVISIBLE
         }
     }
 
     private fun setAnimation(clicked: Boolean) {
-        val fab_option = findViewById<ExtendedFloatingActionButton>(R.id.fab_option1)
+        val fab_agrega_alumno = findViewById<ExtendedFloatingActionButton>(R.id.fab_agrega_alumno)
         val fab = findViewById<FloatingActionButton>(R.id.fab)
         if (!clicked) {
-            fab_option.startAnimation(fromBottom)
+            fab_agrega_alumno.startAnimation(fromBottom)
             fab.startAnimation(rotateOpen)
         } else {
-            fab_option.startAnimation(toBottom)
+            fab_agrega_alumno.startAnimation(toBottom)
             fab.startAnimation(rotateClose)
         }
     }

@@ -112,7 +112,8 @@
             android:layout_marginRight="28dp"
             android:hint="Ejem: 85"
             android:gravity="center"
-            android:textStyle="italic"/>
+            android:textStyle="italic"
+            android:inputType="number"/>
     </LinearLayout>
 
     <LinearLayout
@@ -122,6 +123,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:layout_marginBottom="20dp"
         android:layout_gravity="center">
         <Button
             android:id="@+id/ac_cancelar"

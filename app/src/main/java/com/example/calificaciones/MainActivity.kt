@@ -10,6 +10,7 @@ import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Button
+import android.widget.EditText
 import android.widget.PopupWindow
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -34,9 +35,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val rv_recyclerView = findViewById<RecyclerView>(R.id.rv_recyclerView)
+        val mAdapter = RecyclerViewAdapter(alumnos)
 
         rv_recyclerView.layoutManager = LinearLayoutManager(this)
-        rv_recyclerView.adapter = RecyclerViewAdapter(alumnos)
+        rv_recyclerView.adapter = mAdapter
 
 
         val fab = findViewById<FloatingActionButton>(R.id.fab)
@@ -47,23 +49,31 @@ class MainActivity : AppCompatActivity() {
         }
 
         fab_option.setOnClickListener { view ->
-            nuevoAlumno()
+            nuevoAlumno(mAdapter)
         }
 
     }
 
-    private fun nuevoAlumno() {
+    private fun nuevoAlumno(adapter: RecyclerViewAdapter) {
         val view = View.inflate(this, R.layout.agregar_alumno,null)
         val builder = AlertDialog.Builder(this)
         builder.setView(view)
         val dialog = builder.create()
         dialog.show()
         dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
-        findViewById<Button>(R.id.aa_aceptar).setOnClickListener { v: View ->
+        onAddButtonClicked()
+        view.findViewById<Button>(R.id.aa_aceptar).setOnClickListener { v: View ->
             dialog.dismiss()
         }
-        findViewById<Button>(R.id.aa_aceptar).setOnClickListener { v : View ->
-
+        view.findViewById<Button>(R.id.aa_aceptar).setOnClickListener { v : View ->
+            val nuevo_alumno = Alumno(
+                    view.findViewById<EditText>(R.id.aa_nombre_input).text.toString(),
+                    view.findViewById<EditText>(R.id.aa_exp_input).text.toString()
+            )
+            alumnos += nuevo_alumno
+            adapter.update(alumnos)
+            Toast.makeText(this, "Alumno agregado", Toast.LENGTH_SHORT).show()
+            dialog.dismiss()
         }
     }
 

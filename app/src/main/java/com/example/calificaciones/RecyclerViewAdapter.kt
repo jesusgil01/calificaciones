@@ -86,4 +86,9 @@ class RecyclerViewAdapter (private var alumnos : Array<Alumno>) : RecyclerView.A
         return alumnos.size
     }
 
+    fun update(array: Array<Alumno>){
+        this.alumnos = array
+        this.notifyDataSetChanged()
+    }
+
 }

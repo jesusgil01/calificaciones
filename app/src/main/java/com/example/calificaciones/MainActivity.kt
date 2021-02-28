@@ -9,6 +9,7 @@ import android.view.MenuItem
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import android.widget.Button
 import android.widget.PopupWindow
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -26,13 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     private var clicked = false
 
-    var gil : Alumno = Alumno ("Jesús Gil", "213203497")
-    var villa : Alumno = Alumno ("Jesús Villalobos", "213203497")
-    var beto : Alumno = Alumno ("Jesús Ornelas", "213203497")
-    var arody : Alumno = Alumno ("Arody Monares", "213203497")
-    var nani : Alumno = Alumno("Daniel Lacarra", "213203497")
-
-    var alumnos : List<Alumno> = listOf(gil, villa ,beto , arody, nani)
+    var alumnos : Array<Alumno> = arregloAlumnos().getAlumnos()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,6 +59,12 @@ class MainActivity : AppCompatActivity() {
         val dialog = builder.create()
         dialog.show()
         dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        findViewById<Button>(R.id.aa_aceptar).setOnClickListener { v: View ->
+            dialog.dismiss()
+        }
+        findViewById<Button>(R.id.aa_aceptar).setOnClickListener { v : View ->
+
+        }
     }
 
     private fun onAddButtonClicked() {

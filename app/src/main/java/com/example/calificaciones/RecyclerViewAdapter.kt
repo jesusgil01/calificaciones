@@ -9,7 +9,7 @@ import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 import android.content.Intent as Intent
 
-class RecyclerViewAdapter (private var alumnos : List<Alumno>) : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>(){
+class RecyclerViewAdapter (private var alumnos : Array<Alumno>) : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>(){
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
@@ -59,6 +59,8 @@ class RecyclerViewAdapter (private var alumnos : List<Alumno>) : RecyclerView.Ad
         view.findViewById<Button>(R.id.mi_aceptar).setOnClickListener { v: View ->
             saveInfo(alumno,view)
             Toast.makeText(holder.itemView.context, "Información guardada", Toast.LENGTH_SHORT).show()
+            dialog.dismiss()
+            this.notifyDataSetChanged()
         }
     }
 

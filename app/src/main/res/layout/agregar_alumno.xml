@@ -68,7 +68,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="20dp">
             <Button
-                android:id="@+id/ac_cancelar"
+                android:id="@+id/aa_cancelar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cancelar"
@@ -76,7 +76,7 @@
                 android:layout_marginLeft="18dp"
                 android:layout_marginRight="48dp"/>
             <Button
-                android:id="@+id/ac_aceptar"
+                android:id="@+id/aa_aceptar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="18dp"

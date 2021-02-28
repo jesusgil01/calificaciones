@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="370dp"
+    android:layout_height="400dp"
+    android:orientation="vertical"
+    android:background="@drawable/custom_alert"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/user"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/ac_nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textColor="@color/gray_text"
+                android:textSize="18sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:id="@+id/ac_expediente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expediente"
+                android:textColor="@color/gray_text"
+                android:textSize="18sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/seleccione_el_parcial"
+            android:textSize="18sp"
+            android:textColor="@color/gray_text"
+            android:layout_gravity="top|center"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <RadioButton
+                android:id="@+id/rb_primero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Primero"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+            <RadioButton
+                android:id="@+id/rb_segundo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Segundo"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+            <RadioButton
+                android:id="@+id/rb_tercero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tercer"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calificación"
+            android:textSize="18sp"
+            android:textColor="@color/gray_text"
+            android:layout_marginLeft="28dp"/>
+        <EditText
+            android:id="@+id/ac_input"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/custom_input_rect"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="28dp"
+            android:hint="Ejem: 85"
+            android:gravity="center"
+            android:textStyle="italic"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center">
+        <Button
+            android:id="@+id/ac_cancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:backgroundTint="@color/orange"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="48dp"/>
+
+        <Button
+            android:id="@+id/ac_aceptar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp"
+            android:backgroundTint="@color/orange"
+            android:text="Aceptar" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

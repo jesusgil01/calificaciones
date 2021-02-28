@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="370dp"
+    android:layout_height="400dp"
+    android:orientation="vertical"
+    android:background="@drawable/custom_alert"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/user"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Nombre"
+            android:textSize="18sp"
+            android:textColor="@color/gray_text"
+            android:layout_gravity="center"/>
+        <EditText
+            android:id="@+id/aa_nombre_input"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="15sp"
+            android:background="@drawable/custom_input_rect"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="28dp"
+            android:hint="Ejem: Jesús Gil"
+            android:gravity="center"
+            android:textStyle="italic"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Expediente"
+            android:textSize="18sp"
+            android:textColor="@color/gray_text"
+            android:layout_gravity="center"/>
+        <EditText
+            android:id="@+id/aa_exp_input"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="15sp"
+            android:background="@drawable/custom_input_rect"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="28dp"
+            android:hint="Ejem: 213203497"
+            android:gravity="center"
+            android:textStyle="italic"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp">
+            <Button
+                android:id="@+id/ac_cancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancelar"
+                android:backgroundTint="@color/orange"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="48dp"/>
+            <Button
+                android:id="@+id/ac_aceptar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="18dp"
+                android:backgroundTint="@color/orange"
+                android:text="Aceptar" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
